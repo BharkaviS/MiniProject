@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		.top{
+			text-align: center;
+			margin:0px;
+			padding:0px;
+			border: 0px;
+			background-color:#D8D4F2;
+		}
+		.topnav {
+	  background-color: #333;
+	  overflow: hidden;
+	  margin:0px;
+	  padding:0px;
+		}
+
+/* Style the links inside the navigation bar */
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  margin : 0px;
+	}
+
+/* Change the color of links on hover */
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+/* Add a color to the active/current link */
+	.topnav a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	}
+	span{
+		float:right;
+	}
+
+	a.a1{
+		//background-color: blue;
+		//border: 10px solid white;
+		color: Black;
+		padding: 18px 35px;
+		text-decoration: none;
+		font-size: 2vw;
+		border-left: 6px solid OrangeRed;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		margin-right: 10px;
+		margin-left: 50px;
+
+	}
+	a.a2{
+		//border: 10px solid white;
+		//background-color: red;
+		color: Black;
+		padding: 30px 35px;
+		text-decoration: none;
+		font-size: 2vw;
+		border-left: 6px solid OrangeRed;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		margin-right: 10px;
+		margin-left: 50px;
+
+		 }
+
+
+	a.a3{
+		//background-color: black;
+		//border: 10px solid white;
+		color: Black;
+		text-decoration: none;
+		font-size: 2vw;
+		padding: 18px 35px;
+		border-left: 6px solid OrangeRed;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		margin-right: 10px;
+		margin-left: 50px;
+
+
+		  }
+	</style>
+</head>
+<body>
+	<div class="top">
+		<h1>R.M.D.Engineering College</h1>
+    	<h3>R.S.M.Nagar,Kavaraipettai-601206</h3>
+		<p><br><br><br></p>
+  </div>
+  <div class="topnav">
+  <a href="home.html">Home</a>
+  <a href="Databases">Database</a>
+  <span><a href="login.html">Login</a></span>
+</div>
+<table align="center">
+	<tr>
+		<td>
+			<br><br><br><br>
+			<a class='a1' href="{% url 'leave' %}">Application for leave</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<br><br><br><br>
+			<a class='a3' href="Generate.html">Generate Counsellor list</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<br><br><br><br>
+			<a class='a2' href="Upload.html">Upload database</a>
+		</td>
+	</tr>
+
+</table>
+</body>
+</html>

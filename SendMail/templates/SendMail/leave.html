@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Application for leave</title>
+	<script>
+	function submit(){
+	if(leave.name.value.length===0){
+		alert("Name cannot be empty!");
+	}
+	if(leave.des.value.length===0){
+		alert("Designation cannot be empty!");
+	}
+	if(leave.dept.value.length===0){
+		alert("Department cannot be empty!");
+	}
+	if(leave.cl.value.length===0 && leave.dl.value.length===0 && leave.vl.value.length===0 && leave.od.value.length===0){
+		alert("Nature of leave cannot be empty!");
+	}
+	else{
+		alert("Response recorded!");
+	}
+
+
+	</script>
+</head>
+<body>
+	<center>
+		<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">R.M.D.Engineering College</h1>
+    <p class="lead">
+    	<h3>R.S.M.Nagar,Kavaraipettai-601206</h3>
+		<h3>Application for OD/Casual Leave/Earned Leave/Vacation etc.</h3></p>
+  </div>
+</div>
+		<!--<h1>R.M.D.Engineering College</h1>
+		<h3>R.S.M.Nagar,Kavaraipettai-601206</h3>
+		<p>Application for OD/Casual Leave/Earned Leave/Vacation etc.</p>-->
+	</center>
+	<form method="POST" action="leaveval.php" name="leave" onsubmit="submit()">
+		<table align ='center'>
+			<tr>
+				<td>Name :</td>
+				<td>
+					<input type="text" name='name'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Designation :</td>
+				<td>
+					<input type="text" name='des'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Department :</td>
+				<td>
+					<input type="text" name='dept'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Nature of leave :</td>
+				<td>
+					CL<input type="radio" name='cl'/>
+					VL<input type="radio" name="vl"/>
+					EL<input type="radio" name="el"/>
+					OD<input type="radio" name="od"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Reason for Leave :</td>
+				<td>
+					<input type="text" name='res'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Period of leave :</td>
+				<td>
+					From:<input type="date" name='sdate'/>
+					To:<input type="date" name="edate">
+				</td>
+			</tr>
+			<tr>
+				<td>Number of days :</td>
+				<td>
+					<input type="number" name='no'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Name :</td>
+				<td>
+					<input type="text" name='name'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Contact address :</td>
+				<td>
+					<input type="text" name='add'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Telephone No :</td>
+				<td>
+					<input type="tel" name='tel'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Total Eligible Leave/Vacation :</td>
+				<td>
+					<input type="number" name='tot'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Leave/Vacation already enjoyed :</td>
+				<td>
+					<input type="number" name='eleave'/>
+				</td>
+			</tr>
+			<tr>
+				<td>Leave/Vacation at Credit :</td>
+				<td>
+					<input type="number" name='cleave'/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+				</td>
+				<td>
+					<a href="{% url 'sendemail' %}" class="btn btn-success">Submit</a>
+					<a href="#" class="btn btn-danger">Cancel</a>
+				</td>
+			</tr>
+		</table>
+
+	</form>
+
+</body>
+
+</html>
